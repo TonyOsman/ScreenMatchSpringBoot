@@ -10,9 +10,6 @@ import java.net.http.HttpResponse;
 
 public class ConsumoAPI {
 
-
-
-
     public String obterDados(String endereco) {
 
         //request
@@ -21,6 +18,7 @@ public class ConsumoAPI {
                 .uri(URI.create(endereco))
                 .build();
         HttpResponse<String> response = null;
+
         try {
             response = client
                     .send(request, HttpResponse.BodyHandlers.ofString());
